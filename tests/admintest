@@ -1,0 +1,10 @@
+<?php
+$enteredPassword = 'joshua181999'; // The password you entered
+$storedBcryptHash = '$2a$12$g2XqhxCLOK43zkuyLCQHaOTDqQipV97Lp3Uc0HErCXgtZ18VPJwVa'; // The hash you retrieved from the database
+
+if (password_verify($enteredPassword, $storedBcryptHash)) {
+    echo "Password is correct!";
+} else {
+    echo "Password is incorrect!";
+}
+?>
